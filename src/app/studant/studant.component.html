@@ -1,0 +1,11 @@
+<!-- Template do component-->
+<div *ngIf="studant">
+  <!-- Interrogação no meu da expressão, significa que ela não é obrigatória. -->
+  Studant: <a href="#" (click)="clicked()">{{studant?.name}}</a>
+  <div *ngIf ='studant?.isJedi'>
+    Jedi Temple: {{studant?.temple}}
+  </div>
+</div>
+<p *ngIf = "!studant">
+  Sem dados para exibir
+</p>
